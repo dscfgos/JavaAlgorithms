@@ -1,5 +1,6 @@
 package com.dscfgos.algorithms.sorts;
 
+import com.dscfgos.algorithms.sorts.interfaces.Sorteable;
 import com.dscfgos.algorithms.sorts.utils.ArraysUtils;
 
 public class QuickSort implements Sorteable {
@@ -7,7 +8,7 @@ public class QuickSort implements Sorteable {
 	public static void main(String[] args) {
 		Integer[] elements = new Integer[] { 5, 3, 2, 1, 4, 6, 7, 9, 8, 0 };
 
-		QuickSort quickSort = new QuickSort();
+		Sorteable quickSort = new QuickSort();
 		quickSort.sort(elements);
 
 		ArraysUtils.printArray(elements);
@@ -45,8 +46,8 @@ public class QuickSort implements Sorteable {
 					rightPointer--;
 				}
 			}
-			
-			//Sort recursive the two sub arrays
+
+			// Sort recursive the two sub arrays
 			if (low < rightPointer) {
 				sort(elements, low, rightPointer);
 			}
