@@ -1,7 +1,7 @@
 package com.dscfgos.algorithms.sorts;
 
-import com.dscfgos.algorithms.sorts.interfaces.Sorteable;
-import com.dscfgos.algorithms.sorts.utils.ArraysUtils;
+import com.dscfgos.algorithms.interfaces.Sorteable;
+import com.dscfgos.algorithms.utils.ArraysUtils;
 
 /**
  * Selection Sort.
