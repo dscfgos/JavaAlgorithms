@@ -15,7 +15,7 @@ public class InsertionSort implements Sorteable {
 		Sorteable quickSort = new InsertionSort();
 		quickSort.sort(elements);
 
-		ArraysUtils.printArray(elements);
+		ArraysUtils.printArray("InsertionSort:", elements);
 	}
 
 	public <T extends Comparable<T>> T[] sort(T[] elements) {

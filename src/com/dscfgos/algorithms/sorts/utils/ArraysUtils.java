@@ -16,6 +16,16 @@ public class ArraysUtils {
 		}
 	}
 
+	public static void printArray(String preffix, Object items[]) {
+		if (items != null && items.length > 0) {
+			System.out.print(preffix);
+			for (Object item : items) {
+				System.out.print(item + " ");
+			}
+			System.out.println();
+		}
+	}
+
 	/**
 	 * Return true if the first element is less than the second
 	 */

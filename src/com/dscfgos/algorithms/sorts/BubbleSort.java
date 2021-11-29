@@ -16,7 +16,7 @@ public class BubbleSort implements Sorteable {
 		Sorteable quickSort = new BubbleSort();
 		quickSort.sort(elements);
 
-		ArraysUtils.printArray(elements);
+		ArraysUtils.printArray("BubbleSort:", elements);
 	}
 
 	public <T extends Comparable<T>> T[] sort(T[] elements) {

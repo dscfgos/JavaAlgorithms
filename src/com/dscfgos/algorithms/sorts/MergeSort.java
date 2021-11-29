@@ -11,7 +11,7 @@ public class MergeSort implements Sorteable {
 		Sorteable quickSort = new MergeSort();
 		quickSort.sort(elements);
 
-		ArraysUtils.printArray(elements);
+		ArraysUtils.printArray("MergeSort:", elements);
 	}
 
 	@SuppressWarnings("unchecked")

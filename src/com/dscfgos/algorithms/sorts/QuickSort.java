@@ -11,7 +11,7 @@ public class QuickSort implements Sorteable {
 		Sorteable quickSort = new QuickSort();
 		quickSort.sort(elements);
 
-		ArraysUtils.printArray(elements);
+		ArraysUtils.printArray("QuickSort:", elements);
 	}
 
 	public <T extends Comparable<T>> T[] sort(T[] elements) {
