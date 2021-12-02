@@ -33,7 +33,7 @@ public class BinarySearch implements Searchable {
 	}
 
 	// Recursive Method
-	private <T extends Comparable<T>> int find(T[] elements, T item, int lowIndex, int highIndex) {
+	public <T extends Comparable<T>> int find(T[] elements, T item, int lowIndex, int highIndex) {
 		int result = -1;
 		// Do find if the array is not empty
 		if (elements != null && elements.length > 0) {

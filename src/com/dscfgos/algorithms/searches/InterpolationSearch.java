@@ -1,7 +1,5 @@
 package com.dscfgos.algorithms.searches;
 
-import com.dscfgos.algorithms.utils.ArraysUtils;
-
 /**
  * Interpolation Search.
  */
@@ -46,28 +44,6 @@ public class InterpolationSearch {
 					low = probe + 1;
 				} else {
 					high = probe - 1;
-				}
-			}
-		}
-
-		return result;
-	}
-
-	// Recursive Method
-	private <T extends Comparable<T>> int find(T[] elements, T item, int lowIndex, int highIndex) {
-		int result = -1;
-		// Do find if the array is not empty
-		if (elements != null && elements.length > 0) {
-			if (highIndex >= lowIndex) {
-				// Middle index
-				int mid = lowIndex + (highIndex - lowIndex) / 2;
-
-				if (ArraysUtils.equalTo(elements[mid], item)) {
-					result = mid;
-				} else if (ArraysUtils.greaterThan(elements[mid], item)) {
-					result = find(elements, item, lowIndex, mid - 1);
-				} else if (ArraysUtils.lessThan(elements[mid], item)) {
-					result = find(elements, item, mid + 1, highIndex);
 				}
 			}
 		}
