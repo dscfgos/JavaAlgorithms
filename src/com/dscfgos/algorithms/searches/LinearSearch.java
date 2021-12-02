@@ -13,9 +13,9 @@ public class LinearSearch implements Searchable {
 	public static void main(String[] args) {
 		Integer[] elements = new Integer[] { 5, 3, 2, 1, 4, 6, 7, 9, 8, 0 };
 
-		Searchable quickSort = new LinearSearch();
+		Searchable search = new LinearSearch();
 
-		int position = quickSort.find(elements, 7);
+		int position = search.find(elements, 7);
 
 		System.out.println(position);
 	}

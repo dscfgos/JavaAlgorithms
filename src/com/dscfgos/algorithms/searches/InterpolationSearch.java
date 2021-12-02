@@ -1,32 +1,53 @@
 package com.dscfgos.algorithms.searches;
 
-import com.dscfgos.algorithms.interfaces.Searchable;
 import com.dscfgos.algorithms.utils.ArraysUtils;
 
 /**
- * Binary Search.
+ * Interpolation Search.
  */
-public class BinarySearch implements Searchable {
+public class InterpolationSearch {
 
 	public static void main(String[] args) {
-		Integer[] elements = new Integer[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-		String[] strElements = new String[] { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j" };
+		int[] elements = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-		Searchable search = new BinarySearch();
+		InterpolationSearch search = new InterpolationSearch();
 
 		int position = search.find(elements, 7);
-		int strPosition = search.find(strElements, "h");
 
-		System.out.println("Integer Position: " + position);
-		System.out.println("String Position: " + strPosition);
+		System.out.println("Position: " + position);
 	}
 
-	public <T extends Comparable<T>> int find(T[] elements, T item) {
+	public int find(int[] elements, int item) {
 		int result = -1;
 
 		// Do find if the array is not empty
 		if (elements != null && elements.length > 0) {
-			result = this.find(elements, item, 0, elements.length - 1);
+			int low = 0;
+			int high = elements.length - 1;
+
+			while (item >= elements[low] && item <= elements[high] && low <= high) {
+
+				//Probe Formula
+				int probe = low + (high - low) * (item - elements[low]) / (elements[high] - elements[low]);
+
+				if (high == low) {
+					if (elements[low] == item) {
+						result = low;
+					} else {
+						result = -1;
+					}
+				}
+
+				else if (elements[probe] == item) {
+					result = probe;
+				}
+
+				if (elements[probe] < item) {
+					low = probe + 1;
+				} else {
+					high = probe - 1;
+				}
+			}
 		}
 
 		return result;

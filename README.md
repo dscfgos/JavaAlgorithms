@@ -14,6 +14,15 @@ Java basic algorithms implementations
 
 [5. Insertion Sort](#insertion-sort)
 
+## Seaching
+
+[1. Linear Search](#linear-search)
+
+[2. Binary Search](#binary-search)
+
+[3. Binary Search](#interpolation-search)
+
+## Sorting
 ### Quick Sort
 
 Quicksort is a sorting algorithm, which is leveraging the divide-and-conquer principle.
@@ -39,10 +48,6 @@ We assume that the first card is already sorted then, we select an unsorted card
 
 ## Searching
 
-[1. Linear Search](#linear-search)
-
-[2. Binary Search](#binary-search)
-
 ### Linear Search
 
 Linear search is a sequential searching algorithm where we start from one end and check every element of the list until the desired element is found.
@@ -50,3 +55,7 @@ Linear search is a sequential searching algorithm where we start from one end an
 ### Binary Search
 
 Search a sorted array by repeatedly dividing the search interval in half. Begin with an interval covering the whole array. If the value of the search key is less than the item in the middle of the interval, narrow the interval to the lower half. Otherwise, narrow it to the upper half. Repeatedly check until the value is found or the interval is empty.
+
+### Inerpolation Search
+
+The Interpolation Search is an improvement over Binary Search for instances, where the values in a sorted array are uniformly distributed. Binary Search always goes to the middle element to check. On the other hand, interpolation search may go to different locations according to the value of the key being searched. For example, if the value of the key is closer to the last element, interpolation search is likely to start search toward the end side.

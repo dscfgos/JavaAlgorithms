@@ -41,6 +41,20 @@ public class ArraysUtils {
 	}
 
 	/**
+	 * Return true if the first element is greater or equal than the second
+	 */
+	public static <T extends Comparable<T>> boolean greaterEqual(T obj1, T obj2) {
+		return obj1.compareTo(obj2) > 0 || obj1.compareTo(obj2) == 0;
+	}
+
+	/**
+	 * Return true if the first element is less or equal than the second
+	 */
+	public static <T extends Comparable<T>> boolean lessEqual(T obj1, T obj2) {
+		return obj1.compareTo(obj2) < 0 || obj1.compareTo(obj2) == 0;
+	}
+
+	/**
 	 * Return true if the first element is equal to the second
 	 */
 	public static <T extends Comparable<T>> boolean equalTo(T obj1, T obj2) {
